@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: "640px",
+            // => @media (min-width: 640px) { .. . }
+
+            md: "768px",
+            // => @media (min-width: 768px) { ... }
+
+            lg: "980px",
+            // => @media (min-width: 1024px) { ... }
+
+            xl: "1280px",
+            // => @media (min-width: 1280px) { ... }
+
+            "2xl": "1536px",
+            // => @media (min-width: 1536px) { ... }
+          },
+        },
+      };
+    </script>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="canonical" href="https://checkmyiponline.com/about.html" />
+    <title>About Us</title>
+    <meta name="description" content="Check MY IP Online About Us page" />
+
+    <style>
+      body {
+        overflow-x: hidden !important;
+      }
+    </style>
+  </head>
+
+  <body
+    class="font-kumbh"
+    style="overflow-x: hidden; font-family: Jost, sans-serif"
+  >
+    <div
+      id="header"
+      class="bg-white w-full min-w-full h-[100px] md:h-[100px] shadow-xl flex flex-col lg:flex-row items-center justify-between px-4 lg:px-20"
+    >
+      <div class="p-5 flex items-center justify-between w-[100%] h-full">
+        <a href="/" class="hidden md:flex cursor-pointer flex-1">
+          <img src="/logo.png" alt="logo" class="" style="width: 15rem" />
+        </a>
+        <a href="/" class="cursor-pointer flex-1 md:hidden">
+          <img src="/logo.png" alt="logo" class="" style="width: 70%" />
+        </a>
+        <div class="hidden md:flex items-baseline justify-center">
+          <ul
+            class="flex flex-row justify-between gap-5 items-center font-Jost mr-5"
+          >
+            <li>
+              <a
+                href="/"
+                class="text-lg cursor-pointer font-semibold hover:scale-105 hover:bg-blue-600 rounded-md transition-all duration-200 hover:text-white hover:p-2"
+              >
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/blogs.html"
+                class="text-lg cursor-pointer font-semibold hover:scale-105 hover:bg-blue-600 rounded-md transition-all duration-200 hover:text-white hover:p-2"
+              >
+                Blogs
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/contact.html"
+                class="text-lg cursor-pointer font-semibold hover:scale-105 hover:bg-blue-600 rounded-md transition-all duration-200 hover:text-white hover:p-2"
+              >
+                Contact
+              </a>
+            </li>
+            <li>
+              <a
+                href="/about.html"
+                class="text-lg cursor-pointer font-semibold hover:scale-105 hover:bg-blue-600 rounded-md transition-all duration-200 hover:text-white hover:p-2"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="/privacy-policy.html"
+                class="text-lg cursor-pointer font-semibold hover:scale-105 hover:bg-blue-600 rounded-md transition-all duration-200 hover:text-white hover:p-2"
+              >
+                Privacy Policy
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div id="mobileMenuBtn" class="md:hidden w-10 h-10 flex justify-center">
+          <span
+            id="hamburgerIcon"
+            class="block text-gray-500 hover:text-gray-700 focus:text-gray-700"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="w-full justify-center hidden">
+      <ul
+        class="z-30 w-full p-10 fixed transform transition-all duration-300 delay-300 top-20 mt-4 rounded-xl bg-zinc-200"
+      >
+        <li class="border-b-2 p-3 border-zinc-300 w-full">
+          <a
+            href="/"
+            onclick="handleClose()"
+            class="cursor-pointer hover:pb-3 hover:border-b-[3px] hover:border-solid hover:border-[#007cff]"
+          >
+            Home
+          </a>
+        </li>
+
+        <li class="border-b-2 p-3 border-zinc-300 w-full">
+          <a
+            href="/blogs.html"
+            onclick="handleClose()"
+            class="cursor-pointer hover:pb-3 hover:border-b-[3px] hover:border-solid hover:border-[#007cff]"
+          >
+            Blogs
+          </a>
+        </li>
+
+        <li class="border-b-2 p-3 border-zinc-300 w-full">
+          <a
+            href="/contact.html"
+            onclick="handleClose()"
+            class="cursor-pointer hover:pb-3 hover:border-b-[3px] hover:border-solid hover:border-[#007cff]"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="">
+      <section
+        id="features"
+        class="relative block px-6 py-10 md:py-20 md:px-10"
+      >
+        <div class="relative mx-auto max-w-5xl text-center">
+          <h1
+            class="my-3 flex items-center justify-center font-medium uppercase tracking-wider"
+          >
+            Why choose us
+          </h1>
+          <h2 class="block w-full font-bold text-3xl sm:text-4xl">
+            Check Your Ip Online
+          </h2>
+          <p
+            class="mx-auto my-4 w-full max-w-xl bg-transparent text-center font-medium leading-relaxed tracking-wide"
+          >
+            Our Website will help you find your ip address online or find the
+            location of any ip address
+          </p>
+        </div>
+        <div class="lg:px-24 lg:text-lg my-12">
+          <p>
+            Checkmyiponline.com understands the vital role your IP address plays
+            in shaping your online experience. Whether you are immersed in
+            online gaming, managing remote connections for business, or
+            prioritizing online privacy, your IP address serves as your digital
+            anchor, ensuring seamless connectivity and security. To simplify
+            this important aspect of your online identity, we're dedicated to
+            making the intricacies of IP addresses more accessible through our
+            approachable techniques. Our mission is to equip you with the
+            knowledge, insights, and tools you need.
+          </p>
+          <p class="pt-6">
+            As your trusted partner, CheckmyiPonline is run by a committed team
+            passionate about digital empowerment. Join us on this journey to
+            navigate the internet with confidence and control.
+          </p>
+          <p class="pt-6">
+            CheckMyIPOnline has a profound understanding of how important your
+            IP address is in shaping how you navigate the internet. Your IP
+            address is the digital anchor that guarantees smooth connectivity
+            and security, whether you're venturing into the deep worlds of
+            online gaming, managing remote business connections, or protecting
+            your online privacy. To make this important aspect of your online
+            identity easier for you to understand and manage, we intend to make
+            the intricacies of IP addresses more manageable through our
+            approachable technique. Our goal is to provide you with all the
+            knowledge, tools, and abilities required to function well in the
+            digital world
+          </p>
+          <p class="pt-6">
+            CheckMyIPOnline is your trusted partner, run by a committed team
+            that is passionate about digital empowerment.
+          </p>
+        </div>
+
+        <div
+          class="relative mx-auto max-w-7xl z-10 grid grid-cols-1 gap-10 pt-14 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          <div class="rounded-md border bg-white p-8 text-center shadow-lg">
+            <div
+              class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border"
+              style="
+                background-image: linear-gradient(#007cff 0%, #007cff 100%);
+                border-color: #007cff;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-color-swatch"
+                width="24"
+                style="color: white"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M19 3h-4a2 2 0 0 0 -2 2v12a4 4 0 0 0 8 0v-12a2 2 0 0 0 -2 -2"
+                ></path>
+                <path
+                  d="M13 7.35l-2 -2a2 2 0 0 0 -2.828 0l-2.828 2.828a2 2 0 0 0 0 2.828l9 9"
+                ></path>
+                <path d="M7.3 13h-2.3a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h12"></path>
+                <line x1="17" y1="17" x2="17" y2="17.01"></line>
+              </svg>
+            </div>
+            <h3 class="mt-6">Customizable</h3>
+            <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide">
+              Tailor your landing page's look and feel, from the color scheme to
+              the font size, to the design of the page.
+            </p>
+          </div>
+
+          <div class="rounded-md border bg-white p-8 text-center shadow-lg">
+            <div
+              class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border"
+              style="
+                background-image: linear-gradient(#007cff 0%, #007cff 100%);
+                border-color: #007cff;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-bolt"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="color: white"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <polyline
+                  points="13 3 13 10 19 10 11 21 11 14 5 14 13 3"
+                ></polyline>
+              </svg>
+            </div>
+            <h3 class="mt-6">Fast Performance</h3>
+            <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide">
+              We build our templates for speed in mind, for super-fast load
+              times so your customers never waver.
+            </p>
+          </div>
+
+          <div class="rounded-md border bg-white p-8 text-center shadow-lg">
+            <div
+              class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border"
+              style="
+                background-image: linear-gradient(#007cff 0%, #007cff 100%);
+                border-color: #007cff;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-tools"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                style="color: white"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4"></path>
+                <line x1="14.5" y1="5.5" x2="18.5" y2="9.5"></line>
+                <polyline points="12 8 7 3 3 7 8 12"></polyline>
+                <line x1="7" y1="8" x2="5.5" y2="9.5"></line>
+                <polyline points="16 12 21 17 17 21 12 16"></polyline>
+                <line x1="16" y1="17" x2="14.5" y2="18.5"></line>
+              </svg>
+            </div>
+            <h3 class="mt-6">Fully Featured</h3>
+            <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide">
+              Everything you need to succeed and launch your landing page, right
+              out of the box. No need to install anything else.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="absolute bottom-0 left-0 z-0 h-1/3 w-full border-b"
+          style="
+            background-image: linear-gradient(
+              to right top,
+              rgba(79, 70, 229, 0.2) 0%,
+              transparent 50%,
+              transparent 100%
+            );
+            border-color: rgba(92, 79, 240, 0.2);
+          "
+        ></div>
+        <div
+          class="absolute bottom-0 right-0 z-0 h-1/3 w-full"
+          style="
+            background-image: linear-gradient(
+              to left top,
+              rgba(220, 38, 38, 0.2) 0%,
+              transparent 50%,
+              transparent 100%
+            );
+            border-color: rgba(92, 79, 240, 0.2);
+          "
+        ></div>
+      </section>
+    </div>
+
+    <div
+      class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
+    >
+      <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="sm:col-span-2">
+          <a
+            href="/"
+            aria-label="Go home"
+            title="Company"
+            class="inline-flex items-center"
+          >
+            <svg
+              class="w-8 text-deep-purple-accent-400"
+              viewBox="0 0 24 24"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
+              stroke="currentColor"
+              fill="none"
+            >
+              <rect x="3" y="1" width="7" height="12" />
+              <rect x="3" y="17" width="7" height="6" />
+              <rect x="14" y="1" width="7" height="6" />
+              <rect x="14" y="11" width="7" height="12" />
+            </svg>
+            <span
+              class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase"
+            >
+              CHECK MY IP ONLINE
+            </span>
+          </a>
+          <div class="mt-6 lg:max-w-sm"></div>
+        </div>
+        <div class="space-y-2 text-sm">
+          <p class="text-base font-bold tracking-wide text-gray-900">
+            Contacts
+          </p>
+
+          <div class="flex">
+            <p class="mr-1 text-gray-800">Email:</p>
+            <a
+              href="mailto:info@checkmyiponline.com"
+              aria-label="Our email"
+              title="Our email"
+              class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
+            >
+              info@checkmyiponline.com
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row"
+      >
+        <p class="text-sm text-gray-600">
+          © Copyright 2023 Checkmyiponline.com All rights reserved.
+        </p>
+        <ul
+          class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row"
+        >
+          <li>
+            <a
+              href="/privacy-policy.html"
+              class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
+            >
+              Privacy Policy
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      let isOpen = false;
+
+      document
+        .getElementById("mobileMenuBtn")
+        .addEventListener("click", handleClick);
+
+      function handleClick() {
+        const mobileMenu = document.getElementById("mobileMenu");
+        mobileMenu.classList.toggle("hidden");
+
+        const hamburgerIcon = document.getElementById("hamburgerIcon");
+        if (isOpen) {
+          hamburgerIcon.innerHTML = `
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          `;
+        } else {
+          hamburgerIcon.innerHTML = `
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          `;
+        }
+
+        isOpen = !isOpen;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: "640px",
+            // => @media (min-width: 640px) { .. . }
+
+            md: "768px",
+            // => @media (min-width: 768px) { ... }
+
+            lg: "980px",
+            // => @media (min-width: 1024px) { ... }
+
+            xl: "1280px",
+            // => @media (min-width: 1280px) { ... }
+
+            "2xl": "1536px",
+            // => @media (min-width: 1536px) { ... }
+          },
+        },
+      };
+    </script>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="canonical"
+      href="https://checkmyiponline.com/privacy-policy.html"
+    />
+    <title>Privacy Policy</title>
+    <meta
+      name="description"
+      content="This privacy policy sets out how our website uses and protects any information that you give us when you use this website."
+    />
+    <style>
+      body {
+        overflow-x: hidden !important;
+      }
+    </style>
+  </head>
+
+  <body
+    class="font-kumbh"
+    style="overflow-x: hidden; font-family: Jost, sans-serif"
+  >
+    <div
+      id="header"
+      class="bg-white w-full min-w-full h-[100px] md:h-[100px] shadow-xl flex flex-col lg:flex-row items-center justify-between px-4 lg:px-20"
+    >
+      <div class="p-5 flex items-center justify-between w-[100%] h-full">
+        <a href="/" class="hidden md:flex cursor-pointer flex-1">
+          <img src="/logo.png" alt="logo" class="" style="width: 15rem" />
+        </a>
+        <a href="/" class="cursor-pointer flex-1 md:hidden">
+          <img src="/logo.png" alt="logo" class="" style="width: 70%" />
+        </a>
+        <div class="hidden md:flex items-baseline justify-center">
+          <ul
+            class="flex flex-row justify-between gap-5 items-center font-Jost mr-5"
+          >
+            <li>
+              <a
+                href="/"
+                class="text-lg cursor-pointer font-semibold hover:scale-105 hover:bg-blue-600 rounded-md transition-all duration-200 hover:text-white hover:p-2"
+              >
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/blogs.html"
+                class="text-lg cursor-pointer font-semibold hover:scale-105 hover:bg-blue-600 rounded-md transition-all duration-200 hover:text-white hover:p-2"
+              >
+                Blogs
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/contact.html"
+                class="text-lg cursor-pointer font-semibold hover:scale-105 hover:bg-blue-600 rounded-md transition-all duration-200 hover:text-white hover:p-2"
+              >
+                Contact
+              </a>
+            </li>
+            <li>
+              <a
+                href="/about.html"
+                class="text-lg cursor-pointer font-semibold hover:scale-105 hover:bg-blue-600 rounded-md transition-all duration-200 hover:text-white hover:p-2"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="/privacy-policy.html"
+                class="text-lg cursor-pointer font-semibold hover:scale-105 hover:bg-blue-600 rounded-md transition-all duration-200 hover:text-white hover:p-2"
+              >
+                Privacy Policy
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div id="mobileMenuBtn" class="md:hidden w-10 h-10 flex justify-center">
+          <span
+            id="hamburgerIcon"
+            class="block text-gray-500 hover:text-gray-700 focus:text-gray-700"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="w-full justify-center hidden">
+      <ul
+        class="z-30 w-full p-10 fixed transform transition-all duration-300 delay-300 top-20 mt-4 rounded-xl bg-zinc-200"
+      >
+        <li class="border-b-2 p-3 border-zinc-300 w-full">
+          <a
+            href="/"
+            onclick="handleClose()"
+            class="cursor-pointer hover:pb-3 hover:border-b-[3px] hover:border-solid hover:border-[#007cff]"
+          >
+            Home
+          </a>
+        </li>
+
+        <li class="border-b-2 p-3 border-zinc-300 w-full">
+          <a
+            href="/blogs.html"
+            onclick="handleClose()"
+            class="cursor-pointer hover:pb-3 hover:border-b-[3px] hover:border-solid hover:border-[#007cff]"
+          >
+            Blogs
+          </a>
+        </li>
+
+        <li class="border-b-2 p-3 border-zinc-300 w-full">
+          <a
+            href="/contact.html"
+            onclick="handleClose()"
+            class="cursor-pointer hover:pb-3 hover:border-b-[3px] hover:border-solid hover:border-[#007cff]"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-gray-100 py-14">
+      <div class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl pb-12 font-bold mb-4 text-center">
+          Privacy Policy
+        </h1>
+
+        <p class="mb-4">
+          This privacy policy sets out how our website uses and protects any
+          information that you give us when you use this website.
+        </p>
+
+        <h2 class="text-2xl font-bold mb-2">Information We Collect</h2>
+
+        <p class="mb-4">We may collect the following information:</p>
+
+        <ul class="list-disc list-inside mb-4">
+          <li>Your name and contact information</li>
+          <li>Demographic information</li>
+          <li>Other information relevant to customer surveys and/or offers</li>
+        </ul>
+
+        <p class="text-2xl font-bold mb-2">How We Use the Information</p>
+
+        <p class="mb-4">
+          We require this information to understand your needs and provide you
+          with a better service, and in particular for the following reasons:
+        </p>
+
+        <ul class="list-disc list-inside mb-4">
+          <li>Internal record keeping</li>
+          <li>Improving our products and services</li>
+          <li>
+            Sending promotional emails about new products, special offers, or
+            other information which we think you may find interesting
+          </li>
+          <li>
+            From time to time, we may also use your information to contact you
+            for market research purposes. We may contact you by email, phone, or
+            mail. We may use the information to customize the website according
+            to your interests.
+          </li>
+        </ul>
+
+        <p class="text-2xl font-bold mb-2">Security</p>
+
+        <p class="mb-4">
+          We are committed to ensuring that your information is secure. In order
+          to prevent unauthorized access or disclosure, we have put in place
+          suitable physical, electronic, and managerial procedures to safeguard
+          and secure the information we collect online.
+        </p>
+
+        <p class="text-2xl font-bold mb-2">Cookies</p>
+
+        <p class="mb-4">
+          A cookie is a small file that asks permission to be placed on your
+          computer's hard drive. Once you agree, the file is added, and the
+          cookie helps analyze web traffic or lets you know when you visit a
+          particular site. Cookies allow web applications to respond to you as
+          an individual. The web application can tailor its operations to your
+          needs, likes, and dislikes by gathering and remembering information
+          about your preferences.
+        </p>
+
+        <p class="mb-4">
+          Overall, cookies help us provide you with a better website by enabling
+          us to monitor which pages you find useful and which you do not. A
+          cookie in no way gives us access to your computer or any information
+          about you, other than the data you choose to share with us.
+        </p>
+
+        <p class="text-2xl font-bold mb-2">Links to Other Websites</p>
+
+        <p class="mb-4">
+          Our website may contain links to other websites of interest. However,
+          once you have used these links to leave our site, you should note that
+          we do not have any control over that other website. Therefore, we
+          cannot be responsible for the protection and privacy of any
+          information which you provide whilst visiting such sites and such
+          sites are not governed by this privacy statement. You should exercise
+          caution and look at the privacy statement applicable to the website in
+          question.
+        </p>
+
+        <p class="text-2xl font-bold mb-2">
+          Controlling Your Personal Information
+        </p>
+
+        <p class="mb-4">
+          You may choose to restrict the collection or use of your personal
+          information in the following ways:
+        </p>
+
+        <ul class="list-disc list-inside mb-4">
+          <li>
+            If you have previously agreed to us using your personal information
+            for direct marketing purposes, you may change your mind at any time
+            by writing to or emailing us at [email protected]
+          </li>
+          <li>
+            We will not sell, distribute, or lease your personal information to
+            third parties unless we have your permission or are required by law
+            to do so. We may use your personal information to send you
+            promotional information about third parties which we think you may
+            find interesting if you tell us that you wish this to happen.
+          </li>
+          <li>
+            You may request details of personal information which we hold about
+            you. If you would like a copy of the information held on you, please
+            write to [Your Company Name, Address, City, State, Zip Code] or
+            email [email protected]
+          </li>
+          <li>
+            If you believe that any information we are holding on you is
+            incorrect or incomplete, please write to or email us as soon as
+            possible at the above address. We will promptly correct any
+            information found to be incorrect.
+          </li>
+        </ul>
+
+        <p class="mb-4">
+          This privacy policy is subject to change without notice.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
+    >
+      <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="sm:col-span-2">
+          <a
+            href="/"
+            aria-label="Go home"
+            title="Company"
+            class="inline-flex items-center"
+          >
+            <svg
+              class="w-8 text-deep-purple-accent-400"
+              viewBox="0 0 24 24"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
+              stroke="currentColor"
+              fill="none"
+            >
+              <rect x="3" y="1" width="7" height="12" />
+              <rect x="3" y="17" width="7" height="6" />
+              <rect x="14" y="1" width="7" height="6" />
+              <rect x="14" y="11" width="7" height="12" />
+            </svg>
+            <span
+              class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase"
+            >
+              CHECK MY IP ONLINE
+            </span>
+          </a>
+          <div class="mt-6 lg:max-w-sm"></div>
+        </div>
+        <div class="space-y-2 text-sm">
+          <p class="text-base font-bold tracking-wide text-gray-900">
+            Contacts
+          </p>
+
+          <div class="flex">
+            <p class="mr-1 text-gray-800">Email:</p>
+            <a
+              href="mailto:info@checkmyiponline.com"
+              aria-label="Our email"
+              title="Our email"
+              class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
+            >
+              info@checkmyiponline.com
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row"
+      >
+        <p class="text-sm text-gray-600">
+          © Copyright 2023 Checkmyiponline.com All rights reserved.
+        </p>
+        <ul
+          class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row"
+        >
+          <li>
+            <a
+              href="/"
+              class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
+            >
+            </a>
+          </li>
+          <li>
+            <a
+              href="/privacy-policy.html"
+              class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
+            >
+              Privacy Policy
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      let isOpen = false;
+
+      document
+        .getElementById("mobileMenuBtn")
+        .addEventListener("click", handleClick);
+
+      function handleClick() {
+        const mobileMenu = document.getElementById("mobileMenu");
+        mobileMenu.classList.toggle("hidden");
+
+        const hamburgerIcon = document.getElementById("hamburgerIcon");
+        if (isOpen) {
+          hamburgerIcon.innerHTML = `
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          `;
+        } else {
+          hamburgerIcon.innerHTML = `
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          `;
+        }
+
+        isOpen = !isOpen;
+      }
+    </script>
+  </body>
+</html>

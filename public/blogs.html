@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: "640px",
+            // => @media (min-width: 640px) { .. . }
+
+            md: "768px",
+            // => @media (min-width: 768px) { ... }
+
+            lg: "980px",
+            // => @media (min-width: 1024px) { ... }
+
+            xl: "1280px",
+            // => @media (min-width: 1280px) { ... }
+
+            "2xl": "1536px",
+            // => @media (min-width: 1536px) { ... }
+          },
+        },
+      };
+    </script>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Blogs</title>
+    <meta name="description" content="Check My IP Online Blogs Section" />
+
+    <link rel="canonical" href="https://checkmyiponline.com/blogs.html" />
+
+    <style>
+      body {
+        overflow-x: hidden !important;
+      }
+    </style>
+  </head>
+
+  <body
+    class="font-Jost"
+    style="overflow-x: hidden; font-family: Jost, sans-serif"
+  >
+    <div
+      id="header"
+      class="bg-white w-full min-w-full h-[100px] md:h-[100px] shadow-xl flex flex-col lg:flex-row items-center justify-between px-4 lg:px-20"
+    >
+      <div class="p-5 flex items-center justify-between w-[100%] h-full">
+        <a href="/" class="hidden md:flex cursor-pointer flex-1">
+          <img src="/logo.png" alt="logo" class="" style="width: 15rem" />
+        </a>
+        <a href="/" class="cursor-pointer flex-1 md:hidden">
+          <img src="/logo.png" alt="logo" class="" style="width: 70%" />
+        </a>
+        <div class="hidden md:flex items-baseline justify-center">
+          <ul
+            class="flex flex-row justify-between gap-5 items-center font-Jost mr-5"
+          >
+            <li>
+              <a
+                href="/"
+                class="text-lg cursor-pointer font-semibold hover:scale-105 hover:bg-blue-600 rounded-md transition-all duration-200 hover:text-white hover:p-2"
+              >
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/blogs.html"
+                class="text-lg cursor-pointer font-semibold hover:scale-105 hover:bg-blue-600 rounded-md transition-all duration-200 hover:text-white hover:p-2"
+              >
+                Blogs
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/contact.html"
+                class="text-lg cursor-pointer font-semibold hover:scale-105 hover:bg-blue-600 rounded-md transition-all duration-200 hover:text-white hover:p-2"
+              >
+                Contact
+              </a>
+            </li>
+            <li>
+              <a
+                href="/about.html"
+                class="text-lg cursor-pointer font-semibold hover:scale-105 hover:bg-blue-600 rounded-md transition-all duration-200 hover:text-white hover:p-2"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="/privacy-policy.html"
+                class="text-lg cursor-pointer font-semibold hover:scale-105 hover:bg-blue-600 rounded-md transition-all duration-200 hover:text-white hover:p-2"
+              >
+                Privacy Policy
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div id="mobileMenuBtn" class="md:hidden w-10 h-10 flex justify-center">
+          <span
+            id="hamburgerIcon"
+            class="block text-gray-500 hover:text-gray-700 focus:text-gray-700"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="w-full justify-center hidden">
+      <ul
+        class="z-30 w-full p-10 fixed transform transition-all duration-300 delay-300 top-20 mt-4 rounded-xl bg-zinc-200"
+      >
+        <li class="border-b-2 p-3 border-zinc-300 w-full">
+          <a
+            href="/"
+            onclick="handleClose()"
+            class="cursor-pointer hover:pb-3 hover:border-b-[3px] hover:border-solid hover:border-[#007cff]"
+          >
+            Home
+          </a>
+        </li>
+
+        <li class="border-b-2 p-3 border-zinc-300 w-full">
+          <a
+            href="/blogs.html"
+            onclick="handleClose()"
+            class="cursor-pointer hover:pb-3 hover:border-b-[3px] hover:border-solid hover:border-[#007cff]"
+          >
+            Blogs
+          </a>
+        </li>
+
+        <li class="border-b-2 p-3 border-zinc-300 w-full">
+          <a
+            href="/contact.html"
+            onclick="handleClose()"
+            class="cursor-pointer hover:pb-3 hover:border-b-[3px] hover:border-solid hover:border-[#007cff]"
+          >
+            Contact
+          </a>
+        </li>
+        <li>
+          <a
+            href="/about.html"
+            class="cursor-pointer hover:pb-3 hover:border-b-[3px] hover:border-solid hover:border-[#007cff]"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            href="/privacy-policy.html"
+            class="cursor-pointer hover:pb-3 hover:border-b-[3px] hover:border-solid hover:border-[#007cff]"
+          >
+            Privacy Policy
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="py-28 mx-auto max-w-screen-xl text-center lg:px-6">
+      <div class="mx-auto max-w-screen-sm">
+        <h1 class="mb-4 text-4xl font-bold text-gray-900">Blogs</h1>
+        <h2 class="mb-8 font-normal text-gray-600 lg:mb-16 sm:text-xl">
+          Explore the whole collection of blogs from Check-My-IP-Online
+        </h2>
+      </div>
+      <div class="grid mb-8 lg:mb-12 lg:grid-cols-3 gap-8">
+        <a
+          href="/blogs/how-to-find-your-ip-address-easily.html"
+          class="flex min-h-max flex-col justify-center items-start p-8 text-left border-b border-gray-200 md:p-12 lg:border-r hover:scale-105 duration-300 shadow-xl rounded-xl"
+        >
+          <figure>
+            <blockquote class="mb-8">
+              <h3 class="text-lg font-semibold mt-4">
+                Cracking the Code: How to Find Your IP Address Easily
+              </h3>
+              <p class="mt-4">
+                In today's digital world, every device is connected to the
+                internet. These devices are assigned a unique identifier known
+                as an IP address. This IP address of yours plays a crucial role
+                in everything you do online
+              </p>
+            </blockquote>
+            <p class="font-jost" style="font-size: small; color: gray">
+              Date: 27-Mar-2024
+            </p>
+          </figure>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      let isOpen = false;
+
+      document
+        .getElementById("mobileMenuBtn")
+        .addEventListener("click", handleClick);
+
+      function handleClick() {
+        const mobileMenu = document.getElementById("mobileMenu");
+        mobileMenu.classList.toggle("hidden");
+
+        // Toggle between hamburger and close icon
+        const hamburgerIcon = document.getElementById("hamburgerIcon");
+        if (isOpen) {
+          // Change to hamburger icon
+          hamburgerIcon.innerHTML = `
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          `;
+        } else {
+          // Change to close icon
+          hamburgerIcon.innerHTML = `
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          `;
+        }
+
+        isOpen = !isOpen;
+      }
+    </script>
+
+    <div
+      class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
+    >
+      <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="sm:col-span-2">
+          <a
+            href="/"
+            aria-label="Go home"
+            title="Company"
+            class="inline-flex items-center"
+          >
+            <svg
+              class="w-8 text-deep-purple-accent-400"
+              viewBox="0 0 24 24"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
+              stroke="currentColor"
+              fill="none"
+            >
+              <rect x="3" y="1" width="7" height="12" />
+              <rect x="3" y="17" width="7" height="6" />
+              <rect x="14" y="1" width="7" height="6" />
+              <rect x="14" y="11" width="7" height="12" />
+            </svg>
+            <span
+              class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase"
+            >
+              CHECK MY IP ONLINE
+            </span>
+          </a>
+          <div class="mt-6 lg:max-w-sm"></div>
+        </div>
+        <div class="space-y-2 text-sm">
+          <p class="text-base font-bold tracking-wide text-gray-900">
+            Contacts
+          </p>
+
+          <div class="flex">
+            <p class="mr-1 text-gray-800">Email:</p>
+            <a
+              href="mailto:info@checkmyiponline.com"
+              aria-label="Our email"
+              title="Our email"
+              class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
+            >
+              info@checkmyiponline.com
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row"
+      >
+        <p class="text-sm text-gray-600">
+          © Copyright 2023 Checkmyiponline.com All rights reserved.
+        </p>
+        <ul
+          class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row"
+        >
+          <li>
+            <a
+              href="/privacy-policy.html"
+              class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
+            >
+              Privacy Policy
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
